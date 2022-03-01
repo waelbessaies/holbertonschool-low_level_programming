@@ -1,4 +1,9 @@
-#include "main.h"
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <unistd.h>
 /**
  * main - check the code
  * @argc: number of arguments aupplied to program
