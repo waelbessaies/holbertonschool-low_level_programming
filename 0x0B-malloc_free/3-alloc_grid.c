@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <string.h>
 /**
  * alloc_grid - check the code
  * @width: pointer
@@ -14,15 +13,14 @@ int **alloc_grid(int width, int height)
 	int i;
 	int **j;
 
-	j = malloc(sizeof(int *) * width);
+	
 	if (j == NULL)
 		return (NULL);
 	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
-	else
-	{
+		j = malloc(sizeof(int *) * width);
 		for (i = 0; i < height; i++)
 		{
 			j[i] = malloc(sizeof(int) * height);
