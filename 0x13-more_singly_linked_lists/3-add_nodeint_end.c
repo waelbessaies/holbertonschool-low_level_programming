@@ -1,13 +1,10 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
  * add_nodeint_end - check the code
- *@n:..
- *@head:..
- * Return: ..
+ *@n:...
+ *@head:...
+ * Return: ...
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
