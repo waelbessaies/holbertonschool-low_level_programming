@@ -5,25 +5,24 @@
  *Return: the converted number,or 0
  */
 
-unsigned int binary_to_uint(const char *b)
+	unsigned int binary_to_uint( const char *b)
 {
-	unsigned int dec = 0;
-	int count = 0;
+ unsigned int k = 1;
+ unsigned int i=0;
+ int c;
+ unsigned int len;
 
-	if (b==0)
-		return (0);
-	while (b[count])
-	{
-		if (b[count] != '0' && b[count] != '1')
-			return (0);
-		count++;
-	}
-	count = 0;
-	while (b[count])
-	{
-		dec <<= 1;
-		dec += b[count] - '0';
-		count++;
-	}
-	return (dec);
+ len = strlen(b);
+
+  for (c = len-1; c >= 0; c--)
+ {
+  if (b[c] != '0' && b[c] != '1')
+      return (0);
+    if (b[c] == '1')
+    {
+     i += k;
+     }
+    k *= 2;
+}
+ return (i);
 }
