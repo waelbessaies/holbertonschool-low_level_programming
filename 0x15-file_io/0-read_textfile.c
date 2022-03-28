@@ -21,13 +21,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	/
+
 	read_content = read(openfile, filecontent, letters);
 	if (read_content == -1)
 	{
 		return (0);
 	}
-	
+
 	write_content = write(STDOUT_FILENO, filecontent, read_content);
 	if (write_content == -1)
 	{
