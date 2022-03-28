@@ -1,24 +1,51 @@
 #include "main.h"
+
+int _strlen(char *s);
+
 /**
- *append_text_to_file-append text
- *@filename: file that want created
- *@text_content: text to write
- * Return: On success 1.
+ * append_text_to_file- appends text at the end of a file.
+ * @filename: text file to read and printed
+ * @text_content: a NULL terminated string to write to the file
+ *
+ * Return: 1 on success, -1 on failure
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int file;
+	int fd, i;
 
 	if (filename == NULL)
 		return (-1);
 
-	file = open(filename, O_RDWR | O_APPEND);
-	if (fd == -1)
-		return (-1);
 	if (text_content != NULL)
 	{
-		write(fd, text_content, strlen(text_content));
+	fd = open(filename, O_WRONLY | O_APPEND);
+	if (fd == -1)
+		return (-1);
+
+	i = write(fd, text_content, _strlen(text_content));
+	if (i == -1)
+	{
+		return (-1);
 	}
-	close(fd);
+		close(fd);
+	}
 	return (1);
+}
+
+/**
+ * _strlen - get length of string
+ *
+ * @s: string
+ *
+ * Return: length
+ **/
+int _strlen(char *s)
+{
+int i;
+i = 0;
+while (*(s + i) != '\0')
+{
+i++;
+}
+return (i);
 }
