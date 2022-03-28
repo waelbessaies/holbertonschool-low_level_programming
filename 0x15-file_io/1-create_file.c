@@ -1,4 +1,7 @@
 #include "main.h"
+
+int _strlen(char *s);
+
 /**
  * create_file-creates a file
  * @filename: text file to read and printed
@@ -33,3 +36,20 @@ int create_file(const char *filename, char *text_content)
 	return (1);
 }
 
+
+/**
+ * _strlen - get length of string
+ *
+ * @s: string
+ * * Return: length
+ **/
+int _strlen(char *s)
+{
+int i;
+i = 0;
+while (*(s + i) != '\0')
+{
+i++;
+}
+return (i);
+}
