@@ -3,7 +3,7 @@
  * add_dnodeint - function that add a new node in
  * the beginning of a list
  * @head: head of the list
- * @n: integer 
+ * @n: integer
  * Return: the adress
  * NULL when falied
  */
