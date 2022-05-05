@@ -1,12 +1,12 @@
 #include "lists.h"
 /**
- * add_dnodeint - function that add a new node in
- * the beginning of a list
- * @head: head of the list
- * @n: integer
- * Return: the adress
- * NULL when falied
- */
+* add_dnodeint - function that add a new node in
+* the beginning of a list
+* @head: head of the list
+* @n: integer
+* Return: the adress
+* NULL when falied
+*/
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node;
