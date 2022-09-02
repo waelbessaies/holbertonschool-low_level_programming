@@ -23,4 +23,3 @@ for (i = 0; i < size; i++)
 hashtable->array[i] = NULL;
 return (hashtable);
 }
-
